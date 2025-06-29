@@ -14,8 +14,6 @@
 
   <section>
   <h2>共同研究</h2>
-  <img src="images/screenshot.png" alt="実行画面" width="500">
-
   <p>
     仮配属とは、二ヶ月間配属されるゼミのため、この研究はその期間中に行われました。<br>
     本研究では The Beatles の名曲 “Let It Be” を題材に、音楽信号処理によって楽曲構造を視覚化し、その分析を行いました。
@@ -56,29 +54,38 @@
     <li>
       <strong>音声の読み込みと波形表示：</strong><br>
       音声の全体的な強弱や構成を確認するため、波形を可視化。
-      <img src="wave.png" alt="実行画面" width="500">
->
+      <li>
+        <img src="wave.png" alt="実行画面" width="500">
+      </li>
     </li>
     <li>
       <strong>短時間フーリエ変換（STFT）：</strong><br>
       時間・周波数領域でのエネルギー分布をスペクトログラムとして可視化。
-      <img src="power spectrogram.png" alt="実行画面" width="500">
+      <li>
+        <img src="power spectrogram.png" alt="実行画面" width="500">
+      </li>
     </li>
     <li>
       <strong>メルスペクトログラムの生成：</strong><br>
       人間の聴覚特性に近いスケールで音の強さを視覚化。
-      <img src="melpower spectorogram.png" alt="実行画面" width="500">
+      <li>
+        <img src="melpower spectorogram.png" alt="実行画面" width="500">
+      </li>
     </li>
     <li>
       <strong>HPSS（ハーモニー／パーカッション分離）：</strong><br>
       和音や打楽器成分をそれぞれ分離し、音の構成要素を分析。
+      <li>
       <img src="harmonic.png" alt="実行画面" width="500">
       <img src="percussive.png" alt="実行画面" width="500">
+      </li>
     </li>
     <li>
         <strong>音源のジャンル分け：</strong><br>
-        機械学習を用いて音源をジャンル分けする機能の作成
-        <img src="genre.png" alt="実行画面" width="500">
+        機械学習を用いて音源をジャンル分けする機能の作成。使用音源はweb上のフリー音源のデータ。
+        <li>
+            <img src="genre.png" alt="実行画面" width="500">
+        </li>
   </ol>
 
   <h3>5. 結果・考察</h3>
@@ -86,6 +93,7 @@
     <li><strong>ハーモニック成分：</strong>持続音や和音が強調され、楽曲の雰囲気を構成。</li>
     <li><strong>パーカッシブ成分：</strong>ドラムや打音が明瞭になり、リズム構造が視覚化される。</li>
     <li>可視化によって音の構造が明確になり、楽曲理解が深まった。</li>
+    <li>精度の高いジャンル分けの機能が作成できた。
   </ul>
 
   <h3>6. まとめ・今後の展望</h3>
@@ -103,7 +111,11 @@
 
   <section>
     <h2>連絡先</h2>
-    <p>担当した部分のコード: <a href="https://github.com/あなたのID" target="_blank">github.com/あなたのID</a></p>
+    <p>
+        分析に使用したコードです：<br>
+        <a href="music_analyse.ipynb" download>ダウンロード</a>
+    </p>
+
   </section>
 
   <footer>
