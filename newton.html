@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ニュートン法の解析 | 岩本 来道</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ニュートン–ラフソン法の解析</h1>
+    <p>非線形方程式に対する数値解析と比較検討</p>
+  </header>
+
+  <section>
+    <h2>研究概要</h2>
+    <p>
+      ニュートン–ラフソン法（以下、ニュートン法）を中心に、最急降下法や準ニュートン法との比較を行い、
+      それぞれの手法の収束性、初期値依存性、計算コストを検討した。特に、複素平面における初期値鋭敏性やカオス理論との関連、
+      多変数関数への拡張性についても考察を行った。
+    </p>
+
+    <h3>🎓 研究タイトル</h3>
+    <p><strong>非線形最適化におけるニュートン法の挙動と他手法との比較</strong></p>
+
+    <h3>1. 背景・目的</h3>
+    <p>
+      ニュートン法は古くから使われてきた数値計算アルゴリズムであり、非線形方程式の数値解を効率的に求める手法として知られている。
+      本研究では、収束の速度や安定性に焦点をあて、特に初期値による挙動の違いや他の最適化手法との性能比較を目的とした。
+    </p>
+
+    <h3>2. 使用ツール・技術</h3>
+    <ul>
+      <li>Python</li>
+      <li>ライブラリ：NumPy、Matplotlib</li>
+      <li>手法：
+        <ul>
+          <li>ニュートン法</li>
+          <li>最急降下法</li>
+          <li>準ニュートン法</li>
+          <li>複素数平面のフラクタル可視化</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>3. 分析対象</h3>
+    <p>
+      <strong>対象関数：</strong>
+      <ul>
+        <li>y = x³ – 1</li>
+        <li>y = 3 arctan(x – 1) + π/4</li>
+        <li>z³ – 1 = 0（複素関数）</li>
+        <li>f(x) = x⁴ – 3x³ + 2</li>
+        <li>f(x, y) = x² + y² – 4x – 6y + 13</li>
+      </ul>
+    </p>
+
+    <h3>4. 分析プロセス</h3>
+    <ol>
+      <li><strong>収束性の検証：</strong><br>単純な関数で初期値ごとの収束の様子を可視化。</li>
+      <li><img src="newton1.png" alt="実行画面" width="500"></li>
+      <li><img src="newton2.png" alt="実行画面" width="500"></li>
+      <li><strong>複雑な関数での応用：</strong><br>非線形関数において収束しづらいケースの分析。</li>
+      <li><img src="newton3.png" alt="実行画面" width="500"></li>
+      <li><img src="newton4.png" alt="実行画面" width="500"></li>
+      <li><strong>フラクタル的挙動の可視化：</strong><br>複素数領域における初期値鋭敏性の可視化。</li>
+      <li><img src="chaos.png" alt="実行画面" width="500"></li>
+      <li><strong>最急降下法との比較：</strong><br>収束ステップ数と安定性を比較。</li>
+      <li><img src="compair1.png" alt="実行画面" width="500"></li>
+      <li><strong>準ニュートン法との比較：</strong><br>ヘッセ行列不要なアルゴリズムとしての優位性を検討。</li>
+      <li><img src="newton_log.png" alt="実行画面" width="500"></li>
+      <li><img src="quasi_log.png" alt="実行画面" width="500"></li>
+    </ol>
+
+    <h3>5. 結果・考察</h3>
+    <ul>
+      <li>初期値によっては収束が遅延する／しないケースが顕著に見られた。</li>
+      <li>複素数空間では、初期値によって異なる解に収束する領域がフラクタル構造を持つ。</li>
+      <li>最急降下法はステップ数が多く、精度を犠牲にしないと実用的でない。</li>
+      <li>準ニュートン法は安定性があり、ヘッセ行列の計算が不要な点で高次元解析にも向く。</li>
+    </ul>
+
+    <h3>6. まとめ・今後の展望</h3>
+    <p>
+      ニュートン法は初期値に敏感だが、収束速度は高速。今後は、初期値自動設定アルゴリズムとの組み合わせや、
+      深層学習などへの応用が期待される。また準ニュートン法など派生手法も含めて、対象関数の性質ごとに最適な手法を選択することが今後の課題となる。
+    </p>
+    <ul>
+      <li>カオス理論との関連性の追究</li>
+      <li>準ニュートン法の高次元への応用</li>
+      <li>数値解法の組み合わせによるハイブリッド最適化</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>コードファイル</h2>
+    <p>
+      実験に使用したPythonコードです。再現可能な形式で保存されています：<br>
+      <a href="ms2610230046.ipynb" download>ダウンロード</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 岩本 来道</p>
+  </footer>
+</body>
+</html>
