@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>音の解析について | 岩本 来道</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>音の解析について</h1>
+    <p>仮配属ゼミでの音についての研究、解析</p>
+  </header>
+
+  <section>
+  <h2>共同研究</h2>
+  <img src="images/screenshot.png" alt="実行画面" width="500">
+
+  <p>
+    仮配属とは、二ヶ月間配属されるゼミのため、この研究はその期間中に行われました。<br>
+    本研究では The Beatles の名曲 “Let It Be” を題材に、音楽信号処理によって楽曲構造を視覚化し、その分析を行いました。
+  </p>
+
+  <h3>🎓 研究タイトル</h3>
+  <p><strong>音楽信号処理による楽曲分析 〜“Let It Be”の音響的構造を視覚化する〜</strong></p>
+
+  <h3>1. 背景・目的</h3>
+  <p>
+    音楽はリズム・ハーモニー・メロディといった複雑な要素から構成されています。これらを視覚的に分析することで、楽曲構造への理解が深まるとともに、機械学習や音楽生成の基礎データとしても活用可能です。
+    本研究では、The Beatlesの代表曲「Let It Be」の一部を対象に、Pythonの音楽信号処理ライブラリ（librosa）を用いて音響的特徴を分析・可視化します。
+  </p>
+
+  <h3>2. 使用ツール・技術</h3>
+  <ul>
+    <li>Python</li>
+    <li>ライブラリ：librosa、matplotlib、numpy</li>
+    <li>手法：
+      <ul>
+        <li>音声波形のプロット</li>
+        <li>短時間フーリエ変換（STFT）</li>
+        <li>メルスペクトログラムの可視化</li>
+        <li>ハーモニーとパーカッションの分離（HPSS）</li>
+        <li>音楽ジャンルの分類
+      </ul>
+    </li>
+  </ul>
+
+  <h3>3. 分析対象</h3>
+  <p>
+    <strong>楽曲：</strong>The Beatles – “Let It Be”<br>
+    <strong>分析範囲：</strong>楽曲の50秒〜80秒の30秒間
+  </p>
+
+  <h3>4. 分析プロセス</h3>
+  <ol>
+    <li>
+      <strong>音声の読み込みと波形表示：</strong><br>
+      音声の全体的な強弱や構成を確認するため、波形を可視化。
+      <img src="wave.png" alt="実行画面" width="500">
+>
+    </li>
+    <li>
+      <strong>短時間フーリエ変換（STFT）：</strong><br>
+      時間・周波数領域でのエネルギー分布をスペクトログラムとして可視化。
+      <img src="power spectrogram.png" alt="実行画面" width="500">
+    </li>
+    <li>
+      <strong>メルスペクトログラムの生成：</strong><br>
+      人間の聴覚特性に近いスケールで音の強さを視覚化。
+      <img src="melpower spectorogram.png" alt="実行画面" width="500">
+    </li>
+    <li>
+      <strong>HPSS（ハーモニー／パーカッション分離）：</strong><br>
+      和音や打楽器成分をそれぞれ分離し、音の構成要素を分析。
+      <img src="harmonic.png" alt="実行画面" width="500">
+      <img src="percussive.png" alt="実行画面" width="500">
+    </li>
+    <li>
+        <strong>音源のジャンル分け：</strong><br>
+        機械学習を用いて音源をジャンル分けする機能の作成
+        <img src="genre.png" alt="実行画面" width="500">
+  </ol>
+
+  <h3>5. 結果・考察</h3>
+  <ul>
+    <li><strong>ハーモニック成分：</strong>持続音や和音が強調され、楽曲の雰囲気を構成。</li>
+    <li><strong>パーカッシブ成分：</strong>ドラムや打音が明瞭になり、リズム構造が視覚化される。</li>
+    <li>可視化によって音の構造が明確になり、楽曲理解が深まった。</li>
+  </ul>
+
+  <h3>6. まとめ・今後の展望</h3>
+  <p>
+    本研究で用いた手法は、音楽制作、教育、機械学習データ生成、リミックス解析などに応用可能です。今後の展望としては、以下のような発展が期待されます。
+  </p>
+  <ul>
+    <li>他ジャンル・他曲との比較分析</li>
+    <li>自動分類器への応用（ジャンル識別、楽器識別など）</li>
+    <li>音声分離データの生成によるデータ拡張</li>
+  </ul>
+</section>
+
+  
+
+  <section>
+    <h2>連絡先</h2>
+    <p>担当した部分のコード: <a href="https://github.com/あなたのID" target="_blank">github.com/あなたのID</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 あなたの名前</p>
+  </footer>
+</body>
+</html>
